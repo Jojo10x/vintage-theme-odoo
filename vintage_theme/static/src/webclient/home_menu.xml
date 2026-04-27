@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="boardfusion_theme.HomeMenu">
+        <div t-ref="root" class="o_home_menu h-100 overflow-auto">
+            <div class="container">
+                <input t-ref="input" type="text" class="o_search_hidden visually-hidden w-auto" 
+                       t-on-input="_onInputSearch" t-on-blur="_onInputBlur" 
+                       autocomplete="off" />
+                       
+                <div t-if="displayedApps.length" role="listbox" class="o_apps row user-select-none mt-5 mx-0">
+                    <div t-foreach="displayedApps" t-as="app" t-key="app.id" class="col-4 col-md-3 col-lg-2 mb-4 px-2">
+                        <a role="option"
+                           class="o_app o_menuitem d-flex flex-column rounded-3 justify-content-start align-items-center w-100 p-2"
+                           t-att-class="{o_focused: state.focusedIndex === app_index}"
+                           t-att-href="app.href"
+                           t-on-click.prevent="() => this._onAppClick(app)">
+                            
+                            <img t-if="app.webIconData" class="o_app_icon rounded-3 shadow-sm"
+                                 t-attf-src="{{app.webIconData}}" style="width: 70px; height: 70px; object-fit: cover;" />
+                                 
+                            <div t-else="" class="o_app_icon d-flex justify-content-center align-items-center p-2 rounded-3 shadow-sm"
+                                 style="width: 70px; height: 70px; background-color: #0A6B70; color: white;">
+                                <i t-attf-class="fa fa-cube fa-2x"/>
+                            </div>
+                            
+                            <div class="o_caption w-100 text-center text-truncate mt-2 fw-bold" style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);" t-esc="app.label or app.name"/>
+                        </a>
+                    </div>
+                </div>
+                
+                <div t-elif="!displayedApps.length" class="text-center mt-5 text-white">
+                    <h4>No apps found.</h4>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

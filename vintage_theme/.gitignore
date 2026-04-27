@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (if any inside project)
+venv/
+.env/
+.envrc/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Odoo generated / temp (if ever created locally)
+*.sqlite3
+*.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.swo

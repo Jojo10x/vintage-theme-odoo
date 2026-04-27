@@ -1,0 +1,35 @@
+header.o_navbar, header.o_navbar .o_main_navbar {
+    background-color: #0A6B70 !important; 
+    border-bottom: none !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+    .nav-link, .navbar-brand, > a, > button, > div, span, i {
+        color: #ffffff !important;
+
+        &:hover, &:focus {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+    }
+
+    .o_menu_toggle {
+        color: #ffffff !important;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: #ffffff !important;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        
+        a, span, i {
+            color: #212529 !important; 
+            
+            &:hover {
+                color: #0A6B70 !important;
+                background-color: #f8f9fa !important;
+            }
+        }
+    }
+}

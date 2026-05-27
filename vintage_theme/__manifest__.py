@@ -12,7 +12,7 @@
     "author": "Joel Kasisi",
     "website": "https://www.joelkasisi.tech/",
     "license": "OPL-1",
-    "price": 19.00,
+    "price": 5.00,
     "currency": "EUR",
     "images": ["static/description/banner.png"],
     "depends": [
